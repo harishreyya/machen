@@ -9,9 +9,8 @@ const UserList = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/users');
+        const response = await axios.get('https://manchen-backend.onrender.com/users');
         setUsers(response.data);
-        console.log(response.data)
       } catch (error) {
         console.error(error);
       }
